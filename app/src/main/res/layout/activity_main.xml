@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btnPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/rounding"
+        android:text="rv 추가"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 굳이 스크롤뷰를 사용하지 않아도 스크롤이 되므로 주석처리함-->
+    <!-- 스크롤 뷰를 사용한다면 아이템을 모두 생성해야하므로 listview처럼 변해 굳이 recyclerView를 사용하는 이유가 사라짐-->
+    <!--    <ScrollView-->
+    <!--        android:layout_marginLeft="10dp"-->
+    <!--        android:layout_marginTop="20dp"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_weight="10"-->
+    <!--        android:fillViewport="false">-->
+    <!--이유를 알수 없는 리스트 아이템 아래가 잘리는 현상이 발생해 아래쪽에 padding을 넣어 View를 밀어 해결했다.-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:paddingBottom="70dp"
+        android:clipToPadding="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPlus" />
+    <!--    </ScrollView>-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--레이아웃의 둥근 정도를 지정할 수 있는 배경-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle" >
+    <solid android:color="@null"/>
+    <!--둥근 정도 (dp)-->
+    <corners
+        android:bottomRightRadius="15dp"
+        android:bottomLeftRadius="15dp"
+        android:topLeftRadius="15dp"
+        android:topRightRadius="15dp"/>
+    <!--선 굵기 (dp) 선 색상 (values에 color을 이용)-->
+    <stroke
+        android:width="3dp"
+        android:color="@color/black" />
+</shape>
